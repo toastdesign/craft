@@ -16,7 +16,7 @@
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
 	<link rel="stylesheet" href="{{ siteUrl }}/dist/assets/css/app.css">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,6 +31,10 @@
 			</nav>
 		</header>
 
+		<p>
+The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.
+</p>
+
 		<main id="content" role="main">
 			{% block content %}
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
@@ -42,5 +46,6 @@
 			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
 		</footer>
 	</div>
+	<script src="{{ siteUrl }}/dist/assets/js/app.js"></script>
 </body>
 </html>
